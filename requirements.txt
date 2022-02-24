@@ -2,4 +2,8 @@ joblib
 numpy 
 Flask
 Flask-WTF
-gunicorn]
+pandas
+sklearn
+matplotlib
+seaborn
+gunicorn
