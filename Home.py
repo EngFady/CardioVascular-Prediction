@@ -50,11 +50,11 @@ def index():
         active = int(form.active.data)
         bmi = weight / (height/100)**2
         estimators = [gender,height,weight,ap_hi,ap_lo,chol,gluc,smoke,alco,active,age,bmi]
-        model = joblib.load(r'ML model\model.h5')
+        model = joblib.load(r'D:\0 bit\diseaese prediction\ML model\model.h5')
         x = model.predict([estimators])
         result = ''
         if x == [0]:
-            result = 'you haven\'t cardiovascular  disease'
+            result = 'you haven\'t cardiovascular  disease good luck!'
         else : result = 'Presence of cardiovascular disease!  You must see a doctor' 
         session['result'] = result
         session['name'] = name
